@@ -1548,7 +1548,8 @@ cfg_if! {
     } else if #[cfg(any(target_os = "linux",
                         target_os = "l4re",
                         target_os = "android",
-                        target_os = "emscripten"))] {
+                        target_os = "emscripten",
+                        target_os = "cykusz"))] {
         mod linux_like;
         pub use self::linux_like::*;
     } else if #[cfg(any(target_os = "macos",
